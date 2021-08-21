@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caudex&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://use.fontawesome.com/902264e2a2.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body onload="ShowProducts() ; onLoadCartNumbers()">
+    <link rel="stylesheet" href="/CheckoutStyle.css">
+    
+
+
+    <header>
+        <h5 class="HeaderTitle" id="Andreea">Andreea Andrusca</h5>
+        <h5 class="HeaderTitle" id="Hand">Hand Made With Love Accessories</h5>
+        <hr>
+    </header>
+
+    <section class="NavBar">
+        <a href="/"><div id="Home">Home</div></a>
+        <a href="/shop"><div id="Shop">Shop</div></a>
+        <a href="/about"><div id="About">About</div></a>
+        <a href="/faq"><div id="FAQ">FAQ</div></a>
+        <a href="/contact"><div id="Contact">Contact</div></a>
+        <div>
+            <a href="/checkout"><i class="fa fa-shopping-cart"></i></a>
+            <span class="CartNumber"></span>
+        </div>
+    </section>
+    <hr>
+
+    
+    <section class="Checkout Centered">
+        <div class="MyCart ">
+            <div class="MyCartText">My Cart</div>
+            <hr>
+                <div class="Products" id="Products">
+
+                    
+                    
+                </div>
+            <hr>
+        </div>
+
+        <div class="Payment" id="Payment">
+
+        </div>
+    </section>
+    <button class="ProductButton Centered" id="Buy" onclick="payment()">Buy now</button>
+
+  
+
+    <footer>
+        <div class="Copyright">
+            <h5 class="CopyrightMessage">Copyright ©  2021 Andreea Andrusca</h5>
+            <h5 class="CopyrightCreator">Created by Denis Craciun</h5>
+        </div>
+
+        <div class="BackToTop">
+            
+            <a href="#"><button>
+                <i class="fa fa-arrow-up"></i>
+                Back To Top
+                <i class="fa fa-arrow-up"></i>
+            </button></a>
+            
+        </div>
+
+        <div class="Follow">
+            <div class="FollowText">
+                Follow us on:
+            </div>
+            <div class="FollowIcons Centered">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+            
+        </div>
+
+    </footer>
+
+    <script src="/scripts.js" async></script>
+    <script src="/payments.js"></script>
+ 
+</body>
+
+</html>

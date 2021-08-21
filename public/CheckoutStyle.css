@@ -1,0 +1,394 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+::selection{
+    background-color: #F2DCFF;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:visited{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:#7117B8;
+}
+a:active {
+    text-decoration: none;
+}
+
+.Centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*HEADER*/
+header{
+    background-color: #F2DCFF;
+}
+.HeaderTitle{
+    text-align: center;
+    font-size: 35px;
+    margin:0;
+}
+#Andreea{
+    font-family: Caudex;
+    padding-top: 2rem;
+    color:#7117B8;
+}
+#Hand{
+    font-family: Raleway;
+    font-size: 30px;
+    margin-bottom: 3rem;
+}
+
+
+/*Navigation Bar*/
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+.NavBar i{
+    transition: 0.4s;
+}
+.NavBar i:hover{
+    transition: 0.4s;
+    transform: translateY(5px);
+}
+.fa-shopping-cart{
+    color:#8f32d6;
+}
+
+
+
+
+
+/*CHECKOUT*/
+.ProductButton{
+    margin-bottom: 0.5rem;
+    width: 400px;
+    border: none;
+    padding: 0.6rem;
+    font-family: Caudex;
+    font-size: 15px;
+}
+#Buy{
+    background-color: #8f32d6;
+    color:white;
+    transition: 0.4s;
+    margin-bottom: 3rem;
+}
+#Buy:hover{
+    filter: opacity(0.8);
+    transition: 0.4s;
+}
+.Checkout{
+    display: grid;
+    grid-template-areas: 
+    "MyCart Payment";
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+}
+.Checkout hr{
+    border: solid 1px black;
+    margin: 2rem 0;
+}
+.MyCart{
+    grid-area: MyCart;
+    margin-right: 6rem;
+}
+.Products{
+    display: grid;
+    grid-template-rows: auto;
+}
+.Product1{
+    display: grid;
+    grid-template-areas: 
+    "Image Details";
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.Product1Deatails{
+    grid-area: Details;
+}
+.Product1Text{
+    font-size: 30px;
+}
+.Product1Price{
+    margin-top: 1rem;
+    font-size: 20px;
+    font-family: Caudex;
+}
+.Product1Color{
+    margin-top: 1rem;
+    color: #6A6868;
+}
+.Product1Quantity{
+    font-family: Caudex;
+    margin-top: 2rem;
+    color: #6A6868;
+    display: flex;
+}
+.Quantity{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-right: 1rem;
+
+}
+.Product1Quantity input{
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+.MyCart img{
+    border: solid black 1px;
+    grid-area: Image;
+    width: 100px;
+    padding: 4rem 2rem;
+}
+.MyCartText{
+    font-size: 50px;   
+    font-family: Caudex;
+    color:#7117B8; 
+}
+.Payment{
+    grid-area: Payment;
+    margin-left: 6rem;
+}
+.PaymentText{
+    font-size: 50px;
+    font-family: Caudex;
+    color:#7117B8; 
+}
+.Subtotal{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.Subtotal div{
+    font-size: 30px;
+    font-family: Caudex;
+}
+.Shipping{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-top: 7.2rem;
+}
+.Shipping div{
+    font-size: 30px;
+    font-family: Caudex;
+}
+.Total{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.Total div{
+    font-size: 30px;
+    font-family: Caudex;
+}
+.fa-plus{
+    padding: 0.07rem 2rem 0 2rem;
+}
+.Remove{
+    margin-top: 2rem;
+}
+.Remove:hover{
+    color:#7117B8;
+    cursor: pointer;
+}
+.fa-plus{
+    transition: 0.3s;
+}
+.fa-plus:hover{
+    transition: 0.3s;
+    font-size: 20px;
+}
+.fa-minus{
+    transition: 0.3s;
+}
+.fa-minus:hover{
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+
+/*FOOTER*/
+footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "Copyright BackToTop Follow";
+}
+.Copyright{
+    grid-area: Copyright;
+}
+.CopyrightMessage{
+    font-size: 15px;
+    font-family: Caudex;
+    text-align: center;
+    margin-bottom: 0;
+}
+.CopyrightCreator{
+    font-family: Caudax;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 0;
+}
+.BackToTop{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fa-arrow-up{
+    padding: 0 2rem;
+}
+.BackToTop button{
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    font-size: 25px;
+    font-family: Caudex;
+    background-color: #7117B8;
+    color:white;
+    padding: 1rem 0;
+    transition: 0.3s;
+}
+.BackToTop button:hover{
+    background-color:#8f32d6;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+.Follow{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.FollowText{
+    text-align: center;
+    font-family: Caudex;
+    font-size: 20px;
+}
+.FollowIcons{
+    display: flex;
+    justify-content: space-between;
+    width: 12%;
+    font-size: 20px;
+}
+
+
+
+/*Phone*/
+@media (max-width:450px){
+
+    /*NAVBAR*/
+    .NavBar{
+        font-size: 20px;
+        width: 90%;
+    }
+
+
+    
+    /*CHECKOUT*/
+    .Checkout{
+        width: 95%;
+        grid-template-areas: 
+        "MyCart MyCart"
+        "Payment Payment";
+    }
+    .MyCart{
+        margin-right: 0;
+    }
+    .Product1Text{
+        font-size: 20px;
+    }
+    .Payment{
+        margin-left: 0;
+    }
+    .PaymentText{
+        font-size: 40px;
+        margin-top: 7rem;
+    }
+    .MyCartText{
+        font-size: 40px;
+    }
+    
+
+
+    /*COPYRIGHT*/
+    footer{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "BackToTop"
+        "Follow"
+        "Copyright";
+    }
+    .BackToTop button{
+        font-size: 15px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .CopyrightMessage{
+        font-size: 19px;
+    }
+    .CopyrightCreator{
+        font-size: 17px;
+    }
+    .FollowText{
+        font-size: 20px;
+    }
+    .FollowIcons{
+        font-size: 20px;
+        width: 14%;
+    }
+
+}
+
+
+
+@media (max-width:1000px) and (min-width:500px){
+
+    .Checkout{
+        width: 95%;
+    }
+    .MyCartText{
+        font-size: 40px;
+    }
+    .PaymentText{
+        font-size: 40px;
+    }
+    .MyCart{
+        margin-right: 2rem;
+    }
+    .Payment{
+        margin-left: 2rem;
+    }
+}
+
+
+@media (max-width:1500px) and (min-width:1000px){
+    .Checkout{
+        width: 90%;
+    }
+}

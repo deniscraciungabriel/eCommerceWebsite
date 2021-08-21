@@ -1,0 +1,303 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+::selection{
+    background-color: #F2DCFF;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:visited{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:#7117B8;
+}
+a:active {
+    text-decoration: none;
+}
+
+.Centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*HEADER*/
+header{
+    background-color: #F2DCFF;
+}
+.HeaderTitle{
+    text-align: center;
+    font-size: 35px;
+    margin:0;
+}
+#Andreea{
+    font-family: Caudex;
+    padding-top: 2rem;
+    color:#7117B8;
+}
+#Hand{
+    font-family: Raleway;
+    font-size: 30px;
+    margin-bottom: 3rem;
+}
+
+
+/*Navigation Bar*/
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+.NavBar i{
+    transition: 0.4s;
+}
+.NavBar i:hover{
+    transition: 0.4s;
+    transform: translateY(5px);
+}
+#Contact{
+    color: #7117B8;
+}
+
+
+
+
+/*CONTACT*/
+.ContactTitle{
+    text-align: center;
+    font-family: Caudex;
+    font-size: 50px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.ContactTitle hr{
+    width: 15%;
+    margin-top: 0.5rem;
+    border: solid #7117B8 1px;
+}
+.Form{
+    width: 60%;
+    display: grid;
+    grid-template-areas: 
+    "Name Email"
+    "Message Message"
+    "Send Send";
+}
+#Name{
+    grid-area: Name;
+    padding: 1rem 2rem;
+    width: 80%;
+    font-size: 20px;
+    font-family: Raleway;
+}
+#Name:focus{
+    outline: none;
+    border: solid #7117B8 2px;
+}
+#Email{
+    grid-area: Email;
+    padding: 1rem 2rem;
+    width: 80%;
+    font-size: 20px;
+    font-family: Raleway;
+}
+#Email:focus{
+    outline: none;
+    border: solid #7117B8 2px;
+}
+#Message{
+    grid-area: Message;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    width: 90%;
+    resize: none;
+    height: 400px;
+    font-size: 20px;
+    font-family: Raleway;
+}
+#Message:focus{
+    outline: none;
+    border: solid #7117B8 2px;
+}
+#Button{
+    margin-top: 2rem;
+    grid-area: Send;
+    border: none;
+    padding: 1rem 2rem;
+    width: 30%;
+    margin-bottom: 4rem;
+    background-color: #F2DCFF;
+    font-size: 30px;
+    font-family: Caudex;
+}
+#Button:hover{
+    filter: opacity(0.5);
+}
+
+
+
+
+/*FOOTER*/
+footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "Copyright BackToTop Follow";
+}
+.Copyright{
+    grid-area: Copyright;
+}
+.CopyrightMessage{
+    font-size: 15px;
+    font-family: Caudex;
+    text-align: center;
+    margin-bottom: 0;
+}
+.CopyrightCreator{
+    font-family: Caudax;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 0;
+}
+.BackToTop{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fa-arrow-up{
+    padding: 0 2rem;
+}
+.BackToTop button{
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    font-size: 25px;
+    font-family: Caudex;
+    background-color: #7117B8;
+    color:white;
+    padding: 1rem 0;
+    transition: 0.3s;
+}
+.BackToTop button:hover{
+    background-color:#8f32d6;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+.Follow{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.FollowText{
+    text-align: center;
+    font-family: Caudex;
+    font-size: 20px;
+}
+.FollowIcons{
+    display: flex;
+    justify-content: space-between;
+    width: 12%;
+    font-size: 20px;
+}
+
+
+
+/*Phone*/
+@media (max-width:450px){
+
+    /*NAVBAR*/
+    .NavBar{
+        font-size: 20px;
+        width: 90%;
+    }
+
+    
+
+
+
+    /*COPYRIGHT*/
+    footer{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "BackToTop"
+        "Follow"
+        "Copyright";
+    }
+    .BackToTop button{
+        font-size: 15px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .CopyrightMessage{
+        font-size: 19px;
+    }
+    .CopyrightCreator{
+        font-size: 17px;
+    }
+    .FollowText{
+        font-size: 20px;
+    }
+    .FollowIcons{
+        font-size: 20px;
+        width: 14%;
+    }
+
+
+    /*CONTACT*/
+
+    .Form{
+        width: 95%;
+    }
+    #Name{
+        width: 60%;
+        font-size: 15px;
+    }
+    #Email{
+        width: 60%;
+        font-size: 15px;
+    }
+    #Message{
+        width: 80%;
+    }
+    #Button{
+        font-size: 20px;
+    }
+
+
+    
+
+}
+
+
+
+@media (max-width:1000px) and (min-width:500px){
+
+    .Form{
+        width: 80%;
+    }
+
+}
+
+
+@media (max-width:1500px) and (min-width:1000px){
+    
+    .Form{
+        width: 70%;
+    }
+
+
+}

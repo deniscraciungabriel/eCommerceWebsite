@@ -1,0 +1,264 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+::selection{
+    background-color: #F2DCFF;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:visited{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:#7117B8;
+}
+a:active {
+    text-decoration: none;
+}
+
+.Centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*HEADER*/
+header{
+    background-color: #F2DCFF;
+}
+.HeaderTitle{
+    text-align: center;
+    font-size: 35px;
+    margin:0;
+}
+#Andreea{
+    font-family: Caudex;
+    padding-top: 2rem;
+}
+#Hand{
+    font-family: Raleway;
+    font-size: 30px;
+    margin-bottom: 3rem;
+}
+#FAQ{
+    color: #8f32d6;
+}
+#Home{
+    color:black;
+}
+
+
+/*FAQ*/
+.FAQ{
+    font-family: Caudex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "Title Text";
+}
+.FAQBanner{
+    grid-area: Title;
+}
+.FAQBanner div{
+    text-align: center;
+    font-family: Caudex;
+    font-size: 50px;
+    margin-top: 4rem;
+}
+.Questions{
+    grid-area: Text;
+    margin-top: 3rem;
+    font-size: 25px;
+    margin-bottom: 3rem;
+}
+.Questions p{
+    font-size: 20px;
+}
+.FAQBanner hr{
+    width: 35%;
+    border: #7117B8 solid 1px;
+}
+
+
+/*Navigation Bar*/
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+.NavBar i{
+    transition: 0.4s;
+}
+.NavBar i:hover{
+    transition: 0.4s;
+    transform: translateY(5px);
+}
+
+/*SUCCESS*/
+.Success{
+    background-color: #F2DCFF;
+    padding: 3rem;
+    font-family: Caudex;
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    margin-bottom: 25rem;
+}
+.Ok{
+    width: 150px;
+}
+
+/*FOOTER*/
+footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "Copyright BackToTop Follow";
+}
+.Copyright{
+    grid-area: Copyright;
+}
+.CopyrightMessage{
+    font-size: 15px;
+    font-family: Caudex;
+    text-align: center;
+    margin-bottom: 0;
+}
+.CopyrightCreator{
+    font-family: Caudax;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 0;
+}
+.BackToTop{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fa-arrow-up{
+    padding: 0 2rem;
+}
+.BackToTop button{
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    font-size: 25px;
+    font-family: Caudex;
+    background-color: #7117B8;
+    color:white;
+    padding: 1rem 0;
+    transition: 0.3s;
+}
+.BackToTop button:hover{
+    background-color:#8f32d6;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+.Follow{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.FollowText{
+    text-align: center;
+    font-family: Caudex;
+    font-size: 20px;
+}
+.FollowIcons{
+    display: flex;
+    justify-content: space-between;
+    width: 12%;
+    font-size: 20px;
+}
+
+
+/*Phone*/
+@media (max-width:450px){
+
+    /*NAVBAR*/
+    .NavBar{
+        font-size: 20px;
+        width: 90%;
+    }
+
+    /*COPYRIGHT*/
+    footer{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "BackToTop"
+        "Follow"
+        "Copyright";
+    }
+    .BackToTop button{
+        font-size: 15px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .CopyrightMessage{
+        font-size: 19px;
+    }
+    .CopyrightCreator{
+        font-size: 17px;
+    }
+    .FollowText{
+        font-size: 20px;
+    }
+    .FollowIcons{
+        font-size: 20px;
+        width: 14%;
+    }
+
+    /*FAQ*/
+    .Questions{
+        font-size: 20px;
+        padding: 0 2rem;
+    }
+    .Questions p{
+        font-size: 15px;
+    }
+    .FAQ{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "Title"
+        "Text";
+    }
+}
+
+@media (max-width:1000px) and (min-width:500px){
+
+    .Questions{
+        font-size: 20px;
+        padding: 0 2rem;
+    }
+    .FAQ{
+        grid-template-areas: 
+        "Title Title Title"
+        "Text Text Text";
+    }
+
+}
+
+@media (max-width:1500px) and (min-width:1000px){
+    
+    .Questions{
+        font-size: 20px;
+    }
+
+
+}

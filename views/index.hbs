@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andreea Andrusca</title>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caudex&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/902264e2a2.js"></script>
+</head>
+
+<body onload="onLoadCartNumbers()">
+    <link rel="stylesheet" href="/HomeStyle.css">
+
+
+
+    <header>
+        <h5 class="HeaderTitle" id="Andreea">Andreea Andrusca</h5>
+        <h5 class="HeaderTitle" id="Hand">Hand Made With Love Accessories</h5>
+        <hr>
+    </header>
+
+    <section class="NavBar">
+        <a href="/"><div id="Home">Home</div></a>
+        <a href="/shop"><div id="Shop">Shop</div></a>
+        <a href="/about"><div id="About">About</div></a>
+        <a href="/faq"><div id="FAQ">FAQ</div></a>
+        <a href="/contact"><div id="Contact">Contact</div></a>
+        <div>
+            <a href="/checkout"><i class="fa fa-shopping-cart"></i></a>
+            <span class="CartNumber"></span>
+        </div>
+    </section>
+    <hr>
+
+    <section class="Welcome">
+       
+        <img src="/images/YellowEarRing2.jpeg" alt="Earring Image" class="WelcomeImage Centered">
+        <div class="WelcomeMessage">
+            <h5 id="FirstMessage">Lorem ipsum dolor sit amet.</h5>
+            <h5 id="SecondMessage">Lorem, ipsum dolor.</h5>
+            <a href="/shop"><button class="WelcomeButton Centered">Shop Now</button></a>
+        </div>
+
+    </section>
+
+    <section class="CheckOut Centered">
+        <h5 class="CheckOutMessage">Check out my products</h5>
+
+        <div class="Product Centered" id="Product1" onclick="window.location.href='/HandMadeEarring'">
+            <img src="/images/HandMadeEarring.png" alt="Earring with no background" class="Centered">
+            <div class="ProductMessage">Hand Made Earring</div>
+            <hr>
+            <div class="ProductPrice">
+                <h5>$20.00</h5>
+            </div>
+        </div>
+
+        <div class="Product Centered" id="Product2" onclick="window.location.href='/HandMadeEarring'">
+            <img src="/images/HandMadeEarring.png" alt="Earring with no background" class="Centered">
+            <div class="ProductMessage">Hand Made Earring</div>
+            <hr>
+            <div class="ProductPrice">
+                <h5>$20.00</h5>
+            </div>
+        </div>
+
+        <div class="Product Centered" id="Product3" onclick="window.location.href='/HandMadeEarring'">
+            <img src="/images/HandMadeEarring.png" alt="Earring with no background" class="Centered">
+            <div class="ProductMessage">Hand Made Earring</div>
+            <hr>
+            <div class="ProductPrice">
+                <h5>$20.00</h5>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="About Centered">
+        <div class="AboutMessage">
+            <h5 class="AboutTitle">About my products</h5>
+            <h5 class="AboutText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat dolorem quia quos. Minima assumenda atque facilis magni magnam, cum, labore quidem, quas provident harum nostrum cupiditate natus maiores doloribus ut illum dolore id consequuntur! Consequuntur, officia sint? Distinctio soluta itaque laboriosam dignissimos nulla recusandae, minima ullam eaque sapiente sint vel earum quisquam odit magni officia minus expedita beatae saepe ab.
+            </h5>
+            <a href="/about"><button class="Centered">More about it</button></a>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="Copyright">
+            <h5 class="CopyrightMessage">Copyright ©  2021 Andreea Andrusca</h5>
+            <h5 class="CopyrightCreator">Created by Denis Craciun</h5>
+        </div>
+
+        <div class="BackToTop">
+            
+            <a href="#"><button>
+                <i class="fa fa-arrow-up"></i>
+                Back To Top
+                <i class="fa fa-arrow-up"></i>
+            </button></a>
+            
+        </div>
+
+        <div class="Follow">
+            <div class="FollowText">
+                Follow us on:
+            </div>
+            <div class="FollowIcons Centered">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+            
+        </div>
+
+    </footer>
+
+
+    <script src="/scripts.js" async></script>
+</body>
+
+</html>

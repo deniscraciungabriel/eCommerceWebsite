@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caudex&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/902264e2a2.js"></script>
+</head>
+
+<body onload="onLoadCartNumbers() ; ShowShop()">
+    <link rel="stylesheet" href="/ShopStyle.css">
+
+
+
+    <header>
+        <h5 class="HeaderTitle" id="Andreea">Andreea Andrusca</h5>
+        <h5 class="HeaderTitle" id="Hand">Hand Made With Love Accessories</h5>
+        <hr>
+    </header>
+
+    <section class="NavBar">
+        <a href="/"><div id="Home">Home</div></a>
+        <a href="/shop"><div id="Shop">Shop</div></a>
+        <a href="/about"><div id="About">About</div></a>
+        <a href="/faq"><div id="FAQ">FAQ</div></a>
+        <a href="/contact"><div id="Contact">Contact</div></a>
+        <div>
+            <a href="/checkout"><i class="fa fa-shopping-cart"></i></a>
+            <span class="CartNumber"></span>
+        </div>
+    </section>
+    <hr>
+
+    
+    <div class="MyCollection">
+        <h5>My Collection</h5>
+        <hr>
+    </div>
+
+    <div class="SearchWrapper">
+        <div class="Search">
+            <div class="fa fa-search"></div>
+            <input id ="searchbar" class="search" type="text" placeholder="Search For A Product" onkeyup="Filter()"/>
+            <div class="fa fa-times" onclick="DeleteValue(); ShowShop()"></div>
+        </div>
+    </div>
+
+
+
+    <section class="Products Centered" id="ProductsId">
+
+
+        
+
+
+    </section>
+
+
+
+
+
+
+    <footer>
+        <div class="Copyright">
+            <h5 class="CopyrightMessage">Copyright ©  2021 Andreea Andrusca</h5>
+            <h5 class="CopyrightCreator">Created by Denis Craciun</h5>
+        </div>
+
+        <div class="BackToTop">
+            
+            <a href="#"><button>
+                <i class="fa fa-arrow-up"></i>
+                Back To Top
+                <i class="fa fa-arrow-up"></i>
+            </button></a>
+            
+        </div>
+
+        <div class="Follow">
+            <div class="FollowText">
+                Follow us on:
+            </div>
+            <div class="FollowIcons Centered">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+            
+        </div>
+
+    </footer>
+
+
+
+    <script src="/scripts.js" async></script>
+    <script src="/searchbar.js"></script>
+
+</body>
+
+</html>

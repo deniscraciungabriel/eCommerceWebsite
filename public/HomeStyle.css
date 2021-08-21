@@ -1,0 +1,460 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+::selection{
+    background-color: #F2DCFF;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:visited{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:#7117B8;
+}
+a:active {
+    text-decoration: none;
+}
+
+.Centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*HEADER*/
+header{
+    background-color: #F2DCFF;
+}
+.HeaderTitle{
+    text-align: center;
+    font-size: 35px;
+    margin:0;
+}
+#Andreea{
+    font-family: Caudex;
+    padding-top: 2rem;
+    color:#7117B8;
+}
+#Hand{
+    font-family: Raleway;
+    font-size: 30px;
+    margin-bottom: 3rem;
+}
+
+
+/*Navigation Bar*/
+.NavBar{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+.NavBar i{
+    transition: 0.4s;
+}
+.NavBar i:hover{
+    transition: 0.4s;
+    transform: translateY(5px);
+}
+#Home{
+    color: #7117B8;
+}
+
+
+
+/*WELCOME*/
+.WelcomeImage{
+    margin-top: 2rem;
+    width: 63%;
+    opacity: 0.8;
+    border-bottom: #7117B8 solid 5px;
+}
+.WelcomeMessage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: rgba(227, 202, 245, 0.4);
+}
+#FirstMessage{
+    padding-top: 3rem;
+    opacity: 1;
+}
+#SecondMessage{
+    padding-bottom: 2rem;
+    font-family: Raleway;
+}
+.WelcomeMessage h5{
+    font-size: 30px;
+    text-align: center;
+    padding: 0 3rem;
+    margin:0;
+}
+.WelcomeButton{
+    font-size: 25px;
+    margin-bottom: 2rem;
+    padding: 0.5rem 4rem;
+    color:white;
+    background-color: #7117B8;
+    border: none;
+    transition: 0.4s;
+}
+.WelcomeButton:hover{
+    background-color:#8f32d6;
+    transition: 0.4s;
+}
+
+
+/*CHECKOUT*/
+.CheckOut{
+    background-color: #EFE9F3;
+    width:63%;
+    display: grid;
+    grid-template-areas: 
+    "Message Message Message"
+    "Product1 Product2 Product3";
+    margin-top: 2rem;
+}
+.CheckOutMessage{
+    text-align: center;
+    font-size: 50px;
+    font-family: Caudex;
+    margin-bottom: 2rem;
+    grid-area: Message;
+    margin-top: 2rem;
+}
+.Product{
+    background-color: white;
+    margin-bottom: 6rem;
+    transition: 0.4s;
+}
+.Product:hover{
+    transition: 0.4s;
+    padding: 2rem;
+}
+.Product img{
+    width: 100px;
+    padding-top: 3rem;
+    padding-bottom: 5.5rem;
+}
+.ProductMessage{
+    font-family: Caudex;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 3rem;
+}
+.Product hr{
+    width: 20%;
+    border-top: #7117B8 solid 2px;
+}
+.ProductPrice{
+    color:black;
+    font-size: 20px;
+    margin-bottom: 2rem;
+    font-family: Raleway;
+    text-align: center;
+}
+#Product1{
+    grid-area: Product1;
+}
+#Product2{
+    grid-area: Product2;
+}
+#Product3{
+    grid-area: Product3;
+}
+
+
+/*ABOUT*/
+.About{
+    background-image: url("images/HomeAboutBack.jpeg");
+    background-size: cover;
+    width: 56.3%;
+    padding: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 9rem;
+}
+.AboutMessage{
+    background-color: rgb(196, 196, 196, 0.8);
+    width: 40%;
+    margin: 3rem;
+    padding: 1rem 4rem;
+}
+.AboutTitle{
+    text-align: center;
+    font-family: Caudex;
+    font-size: 40px;
+    margin-bottom: 3rem;
+}
+.AboutText{
+    font-family: Raleway;
+    padding-bottom: 2rem;
+}
+.About button{
+    font-family: Raleway;
+    font-size: 20px;
+    background-color: #7117B8;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: none;
+    margin-bottom: 2rem;
+    transition: 0.4s;
+}
+.About button:hover{
+    background-color:#8f32d6;
+    transform: translateY(10px);
+    transition: 0.4s;
+}
+
+
+/*FOOTER*/
+footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "Copyright BackToTop Follow";
+}
+.Copyright{
+    grid-area: Copyright;
+}
+.CopyrightMessage{
+    font-size: 15px;
+    font-family: Caudex;
+    text-align: center;
+    margin-bottom: 0;
+}
+.CopyrightCreator{
+    font-family: Caudax;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 0;
+}
+.BackToTop{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fa-arrow-up{
+    padding: 0 2rem;
+}
+.BackToTop button{
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    font-size: 25px;
+    font-family: Caudex;
+    background-color: #7117B8;
+    color:white;
+    padding: 1rem 0;
+    transition: 0.3s;
+}
+.BackToTop button:hover{
+    background-color:#8f32d6;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+.Follow{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.FollowText{
+    text-align: center;
+    font-family: Caudex;
+    font-size: 20px;
+}
+.FollowIcons{
+    display: flex;
+    justify-content: space-between;
+    width: 12%;
+    font-size: 20px;
+}
+
+
+
+/*Phone*/
+@media (max-width:450px){
+
+    /*NAVBAR*/
+    .NavBar{
+        font-size: 20px;
+        width: 90%;
+    }
+
+
+    /*WELCOME*/
+    .WelcomeImage{
+        width: 98%;
+    }
+    .WelcomeMessage{
+        width: 70%;
+        transform: translate(-50%, -25%);
+    }
+    #FirstMessage{
+        font-size: 20px;
+        padding:1rem 0rem;
+        margin: 0 2rem;
+    }
+    #SecondMessage{
+        font-size: 18px;
+        padding:0;
+        margin: 0 2rem;
+    }
+    .WelcomeButton{
+        font-size: 15px;
+        padding:0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /*CHECKOUT*/
+    .CheckOut{
+        width: 93%;
+        grid-template-areas: 
+        "Message"
+        "Product1"
+        "Product2"
+        "Product3";
+    }
+    .CheckOut img{
+        width: 125px;
+    }
+    .ProductPrice{
+        font-size: 25px;
+    }
+    .CheckOutMessage{
+        font-size: 33px;
+    }
+    .ProductMessage{
+        padding: 0 1rem;
+        font-size: 25px;
+    }
+    
+
+    /*ABOUT*/
+    .About{
+        width: 93%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        padding:2rem 0;
+        margin-bottom: 1rem;
+    }
+    .AboutMessage{
+        padding: 0;
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1rem;
+    }
+    .AboutText{
+        padding: 0 2rem;
+    }
+    .AboutTitle{
+        margin-bottom: 0;
+        font-size: 30px;
+        padding: 1rem 2rem;
+    }
+
+
+    /*COPYRIGHT*/
+    footer{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "BackToTop"
+        "Follow"
+        "Copyright";
+    }
+    .BackToTop button{
+        font-size: 15px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .CopyrightMessage{
+        font-size: 19px;
+    }
+    .CopyrightCreator{
+        font-size: 17px;
+    }
+    .FollowText{
+        font-size: 20px;
+    }
+    .FollowIcons{
+        font-size: 20px;
+        width: 14%;
+    }
+
+}
+
+
+
+@media (max-width:1000px) and (min-width:500px){
+
+    /*WELCOME*/
+    .WelcomeImage{
+        width: 93%;
+    }
+
+    /*CHECKOUT*/
+    .CheckOut{
+        width: 93%;
+    }
+    .ProductMessage{
+        padding: 0 1rem;
+    }
+    
+
+    /*ABOUT*/
+    .About{
+        width: 79%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .AboutMessage{
+        padding: 1rem 5rem;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
+
+
+@media (max-width:1500px) and (min-width:1000px){
+    
+    /*WELCOME*/
+    .WelcomeImage{
+        width: 83%;
+    }
+
+    /*CHECKOUT*/
+    .CheckOut{
+        width: 83%;
+    }
+    .ProductMessage{
+        padding: 0 1rem;
+    }
+    
+    /*ABOUT*/
+    .About{
+        width: 70.3%;
+    }
+    .AboutMessage{
+        padding: 1rem 4rem;
+    }
+}
