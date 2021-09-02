@@ -17,7 +17,8 @@ function myProducts(){
     for (const property in getProducts){
         products.push({
             tag: getProducts[property].tag,
-            inCart: getProducts[property].inCart
+            inCart: getProducts[property].inCart,
+            color: getProducts[property].color
         });
     }
     return products;
