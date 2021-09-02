@@ -106,7 +106,7 @@ exports.paymentsCtrlFunction = async (req,res) =>{
                 productsFromFrontEnd.forEach( singleProductFrontEnd => {
                     if(singleProductList.tag === singleProductFrontEnd.tag){
                         products.push({
-                            name: singleProductList.name,
+                            name: singleProductList.name + " " + singleProductFrontEnd.color,
                             amount: singleProductList.price * 100.00,
                             currency: "eur",
                             quantity: singleProductFrontEnd.inCart
