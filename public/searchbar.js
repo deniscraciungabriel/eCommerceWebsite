@@ -8,55 +8,58 @@ ProductsList2 = [
     {
         name: 'Hand Made Earring',
         tag: "HandMadeEarring",
-        price: 20,
+        price: 9.99,
         inCart: 0,
-        color: "Yellow",
+        color: "Blue",
         
     },
 
     {
-        name: 'Hand Made Lamp',
-        tag: "HandMadeLamp",
-        price: 15,
+        name: 'Hand Made Bracelet',
+        tag: "HandMadeBracelet",
+        price: 14.99,
         inCart:0,
-        color:"Yellow",
+        color:"Purple",
         
     },
 
     {
-        name: 'Hand Made Chair',
-        tag: "HandMadeEarring",
-        price: 20,
+        name: 'Hand Made KeyRing',
+        Image: 'HandMadeKeyRing',
+        tag: "HandMadeKeyRing",
+        price: 9.99,
         inCart: 0,
-        color: "Yellow",
-        
-    },
-    {
-        name: 'Hand Made Table',
-        tag: "HandMadeLamp",
-        price: 15,
-        inCart:0,
-        color:"Yellow",
-        
+        color: "Orange",
     },
 
     {
-        name: 'Hand Made Lampy',
-        tag: "HandMadeEarring",
-        price: 20,
+        name: 'Hand Made Ring',
+        Image: 'HandMadeRing',
+        tag: "HandMadeRing",
+        price: 4.99,
         inCart: 0,
-        color: "Yellow",
-        
+        color: "Pink",
     },
 
     {
-        name: 'Hand Made Lamper',
-        tag: "HandMadeLamp",
-        price: 15,
-        inCart:0,
-        color:"Yellow",
-        
+        name: 'Hand Made PartyFavour',
+        Image: 'HandMadePartyFavour',
+        tag: "HandMadePartyFavour",
+        price: 19.98,
+        inCart: 0,
+        color: "Orange",
+    },
+
+    {
+        name: 'Hand Made Ashtray',
+        Image: 'HandMadeAshtray',
+        tag: "HandMadeAshtray",
+        price: 19.98,
+        inCart: 0,
+        color: "Orange",
     }
+
+    
 
 ];
 
@@ -72,11 +75,11 @@ function ShowShop(){
             if ((i+1) % 2 == 0){
                 ProductsShop.innerHTML += `
                 <div class="Product Centered" id="Product${i+1}" onclick="window.location.href='/${ProductsList2[i].tag}'" style="background-color:#F2E2FE">
-                <img src="../images/${ProductsList2[i].tag}.png" alt="Earring with no background" class="Centered">
+                <img src="../images/${ProductsList2[i].tag}.png" alt="${ProductsList2[i].name} with no background" class="Centered" id ="${ProductsList2[i].tag}">
                 <div class="ProductMessage">${ProductsList2[i].name}</div>
                 <hr>
                 <div class="ProductPrice">
-                    <h5>$${ProductsList2[i].price}</h5>
+                    <h5>€${ProductsList2[i].price}</h5>
                 </div>
                 </div>
         
@@ -85,11 +88,11 @@ function ShowShop(){
             else{
                 ProductsShop.innerHTML += `
                 <div class="Product Centered" id="Product${i+1}" onclick="window.location.href='/${ProductsList2[i].tag}'">
-                <img src="../images/${ProductsList2[i].tag}.png" alt="Earring with no background" class="Centered">
+                <img src="../images/${ProductsList2[i].tag}.png" alt="Earring with no background" class="Centered" id ="${ProductsList2[i].tag}">
                 <div class="ProductMessage">${ProductsList2[i].name}</div>
                 <hr>
                 <div class="ProductPrice">
-                    <h5>$${ProductsList2[i].price}</h5>
+                    <h5>€${ProductsList2[i].price}</h5>
                 </div>
                 </div>
         

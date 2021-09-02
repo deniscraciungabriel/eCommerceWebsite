@@ -25,7 +25,13 @@ a:hover{
 a:active {
     text-decoration: none;
 }
-
+video::-webkit-media-controls-volume-slider {
+    display:none;
+    }
+    
+    video::-webkit-media-controls-mute-button {
+    display:none;
+    }
 .Centered{
     display: block;
     margin-left: auto;
@@ -106,6 +112,9 @@ header{
     grid-area: Image;
     margin-top: auto;
     margin-bottom: auto;
+}
+.AboutVideo{
+    padding: 1rem 0 7rem 0;
 }
 
 

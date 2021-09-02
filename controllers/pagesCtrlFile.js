@@ -10,12 +10,40 @@ exports.shopCtrlFunction = (req, res) =>{
     res.render("shop");
 };
 
+exports.faqCtrlFunction = (req, res) =>{
+    res.render("faq");
+}
+
 exports.handMadeEarringCtrlFunction = (req, res) =>{
     res.render("HandMadeEarring");
 };
 
-exports.handMadeLampCtrlFunction = (req, res) =>{
-    res.render("HandMadeLamp");
+exports.handMadeAshtrayCtrlFunction = (req, res) =>{
+    res.render("HandMadeAshtray");
+};
+
+exports.handMadeRingCtrlFunction = (req, res) =>{
+    res.render("HandMadeRing");
+};
+
+exports.handMadeEarring10mmCtrlFunction = (req, res) =>{
+    res.render("HandMadeEarring10mm");
+};
+
+exports.handMadeEarring12mmCtrlFunction = (req, res) =>{
+    res.render("HandMadeEarring12mm");
+};
+
+exports.handMadeBraceletCtrlFunction = (req, res) =>{
+    res.render("HandMadeBracelet");
+};
+
+exports.handMadeKeyRingCtrlFunction = (req, res) =>{
+    res.render("HandMadeKeyRing");
+};
+
+exports.handMadePartyFavourCtrlFunction = (req, res) =>{
+    res.render("HandMadePartyFavour");
 };
 
 exports.contactCtrlFunction = (req, res) =>{
@@ -65,9 +93,6 @@ exports.finishOrder = async (req,res) =>{
     })
 }
 
-exports.faqCtrlFunction = (req, res) =>{
-    res.render("faq");
-}
 
 exports.paymentsCtrlFunction = async (req,res) =>{
     
@@ -82,14 +107,19 @@ exports.paymentsCtrlFunction = async (req,res) =>{
                     if(singleProductList.tag === singleProductFrontEnd.tag){
                         products.push({
                             name: singleProductList.name,
-                            images: [singleProductList.image],
-                            amount: singleProductList.price * 100,
+                            amount: singleProductList.price * 100.00,
                             currency: "eur",
                             quantity: singleProductFrontEnd.inCart
                         });
                     }
                 })
             } )
+            products.push({
+                name: "Shipping",
+                amount: 4.99 * 100.00,
+                currency: "eur",
+                quantity: 1
+            })
             return products;
         }
 
@@ -98,7 +128,7 @@ exports.paymentsCtrlFunction = async (req,res) =>{
             success_url: `${req.protocol}://${req.get("host")}/checkout/success`,
             cancel_url: `${req.protocol}://${req.get("host")}/checkout`,
             shipping_address_collection:{
-                allowed_countries: ["BE", "AT", "BG", "HR", "DE", "FR", "GR", "IT", "NL", "GB", "RO", "ES"]
+                allowed_countries: ["BE", "AT", "BG", "HR", "DE", "FR", "GR", "IT", "NL", "GB", "RO", "ES", "PT", "CZ", "SK", "SI"]
             },
             line_items: productsToBuy()
         })

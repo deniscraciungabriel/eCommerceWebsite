@@ -3,22 +3,80 @@ const Products = document.getElementById("Products");
 const Details = document.getElementById("Payment");
 const Paymet = document.getElementById("Payment");
 var cartItems = [];
+const HandMadeEarring = document.getElementById("HandMadeEarringImg");
+const HandMadeBracelet = document.getElementById("HandMadeBraceletImg");
 
 ProductsList = [
     {
         name: 'Hand Made Earring',
+        Image: 'HandMadeEarring',
         tag: "HandMadeEarring",
-        price: 20,
+        price: 9.99,
         inCart: 0,
         color: "Yellow",
     },
 
     {
-        name: 'Hand Made Lamp',
-        tag: "HandMadeLamp",
-        price: 15,
+        name: 'Hand Made Earring 10mm',
+        Image: 'HandMadeEarring',
+        tag: "HandMadeEarring10mm",
+        price: 11.99,
+        inCart: 0,
+        color: "Yellow",
+    },
+
+    {
+        name: 'Hand Made Earring 12mm',
+        Image: 'HandMadeEarring',
+        tag: "HandMadeEarring12mm",
+        price: 14.99,
+        inCart: 0,
+        color: "Yellow",
+    },
+
+    {
+        name: 'Hand Made Bracelet',
+        tag: "HandMadeBracelet",
+        Image: 'HandMadeBracelet',
+        price: 14.99,
         inCart:0,
-        color:"Yellow",
+        color:"Purple",
+    },
+
+    {
+        name: 'Hand Made KeyRing',
+        Image: 'HandMadeKeyRing',
+        tag: "HandMadeKeyRing",
+        price: 4.99,
+        inCart: 0,
+        color: "Orange",
+    },
+
+    {
+        name: 'Hand Made Ring',
+        Image: 'HandMadeRing',
+        tag: "HandMadeRing",
+        price: 9.99,
+        inCart: 0,
+        color: "Pink",
+    },
+
+    {
+        name: 'Hand Made PartyFavour',
+        Image: 'HandMadePartyFavour',
+        tag: "HandMadePartyFavour",
+        price: 19.98,
+        inCart: 0,
+        color: "Orange",
+    }, 
+
+    {
+        name: 'Hand Made Ashtray',
+        Image: 'HandMadeAshtray',
+        tag: "HandMadeAshtray",
+        price: 19.98,
+        inCart: 0,
+        color: "Orange",
     }
 
 ]
@@ -49,19 +107,19 @@ function ShowProducts(){
             Products.innerHTML += `
 
         <div class="Product1">
-            <img src="/images/${item.tag}.png" alt="Andrea Andrusca Earring">
+            <img src="/images/${item.Image}${item.color}.png" alt="Andrea Andrusca Earring" id="${item.tag}">
             <div class="Product1Details">
                 <div class="Product1Text">${item.name}</div>
-                <div class="Product1Price">$${item.price}.00</div>
-                <div class="Product1Color">Color: Yellow</div>
+                <div class="Product1Price">€${item.price}</div>
+                <div class="Product1Color">Color: ${item.color}</div>
                 <div class="Product1Quantity">
                     <div class="Quantity">Quantity:</div><br>
                     <div>${item.inCart}</div>
-                    <i class= "fa fa-plus" onclick = "IncreaseQuantity('${item.tag}')"></i>
-                    <i class="fa fa-minus" onclick = "DecreaseQuantity('${item.tag}')"></i>
+                    <i class= "fa fa-plus" onclick = "IncreaseQuantity('${item.tag}${item.color}')"></i>
+                    <i class="fa fa-minus" onclick = "DecreaseQuantity('${item.tag}${item.color}')"></i>
                     
                 </div>
-                <div class="Remove" onclick = "DeleteButtons('${item.name}')">Remove</div>
+                <div class="Remove" onclick = "DeleteButtons('${item.name}${item.color}')">Remove</div>
             </div>
         </div>
         
@@ -77,16 +135,16 @@ function ShowProducts(){
     <hr>
     <div class="Subtotal">
         <div>Subtotal</div>
-        <div>$${localStorage.getItem("TotalCost")}.00</div>
+        <div>€${localStorage.getItem("TotalCost")}</div>
     </div>
     <div class="Shipping">
         <div>Shipping</div>
-        <div>$5.00</div>
+        <div>€4.99</div>
     </div>
     <hr>
     <div class="Total">
         <div>Total</div>
-        <div>$${parseInt(localStorage.getItem("TotalCost")) + 5 }.00</div>
+        <div>€${(parseFloat(localStorage.getItem("TotalCost")) + 4.99).toFixed(2) }</div>
         
     </div>
     `
@@ -133,18 +191,22 @@ function setItems(Product){
     cartItems = JSON.parse(cartItems);
     if (cartItems != null){
 
-        if (cartItems[Product.tag] == undefined){
+        if (cartItems[Product.tag + Product.color] == undefined ){   
             cartItems = {
                 ...cartItems,
-                [Product.tag] : Product
+                [Product.tag + Product.color] : Product
             }
+            cartItems[Product.tag + Product.color].inCart = 1;
         }
-        cartItems[Product.tag].inCart += 1;
+        else{
+            cartItems[Product.tag + Product.color].inCart += 1;
+        }
+        
     }
     else{
         Product.inCart = 1;
         cartItems = {
-            [Product.tag] : Product
+            [Product.tag + Product.color] : Product
         }
     }
     
@@ -180,7 +242,7 @@ function TotalCost(Product){
 
     CartCost = localStorage.getItem("TotalCost");
     if(CartCost != null){
-        CartCost = parseInt(CartCost)
+        CartCost = parseFloat(CartCost)
         localStorage.setItem("TotalCost", CartCost + FinalProduct.price);
         
     }
@@ -339,7 +401,7 @@ function DecreaseQuantity(Name){
     
     cartItems[Name].inCart = cartItems[Name].inCart - 1;
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-    localStorage.setItem("TotalCost", TotalCost - cartItems[Name].price);
+    localStorage.setItem("TotalCost", ((parseFloat(TotalCost) - cartItems[Name].price)).toFixed(2));
     localStorage.setItem("cartNumbers", ProductNumbers - 1);
     location.reload();
 
@@ -357,11 +419,23 @@ function IncreaseQuantity(Name){
     
     cartItems[Name].inCart = cartItems[Name].inCart + 1;
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-    localStorage.setItem("TotalCost", (parseInt(TotalCost) + parseInt(cartItems[Name].price)));
+    localStorage.setItem("TotalCost", (parseFloat(TotalCost) + parseFloat(cartItems[Name].price)).toFixed(2));
     localStorage.setItem("cartNumbers", (parseInt(ProductNumbers) + 1));
     location.reload();
 }
 
+
+function ChangeColor(colorName, productName, productImage){
+    document.getElementById(`${productImage.replace(/ +/g, "")}Img`).src = `/images/${productImage.replace(/ +/g, "")}${colorName}.png`;
+    let FinalProductColor;
+    for (let i=0; i<ProductsList.length; i++){
+        if (ProductsList[i].name == productName){
+            FinalProductColor = ProductsList[i];
+        }
+
+    }
+    FinalProductColor.color = colorName;
+}
 
 
 onLoadCartNumbers(); 

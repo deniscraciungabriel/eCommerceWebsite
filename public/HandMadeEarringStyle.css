@@ -91,6 +91,8 @@ header{
     grid-area: Details;
 }
 .ProductImage{
+    width: 385px; 
+    height: 180px;
     margin: 0 1rem;
     display: flex;
     justify-content: center;
@@ -138,9 +140,33 @@ header{
     filter: opacity(0.5);
 }
 #Blue{
-    background-color: #00F4E6;
+    background-color: #0039f4;
 }
 #Blue:hover{
+    filter: opacity(0.5);
+}
+#Orange{
+    background-color: #fc4700;
+}
+#Orange:hover{
+    filter: opacity(0.5);
+}
+#LightBlue{
+    background-color: #00ccff;
+}
+#LightBlue:hover{
+    filter: opacity(0.5);
+}
+#Purple{
+    background-color: #ae00ff;
+}
+#Purple:hover{
+    filter: opacity(0.5);
+}
+#Pink{
+    background-color: #e640fc;
+}
+#Pink:hover{
     filter: opacity(0.5);
 }
 .ProductQuantity{
@@ -166,6 +192,15 @@ header{
     font-family: Caudex;
     font-size: 15px;
 }
+.ProductSize button{
+    font-size: 15px;
+    font-family: Caudex;
+    padding: 0.5rem;
+}
+.ProductSizeButton{
+    background-color:#CFA5F0;
+    color:white;
+}
 #Cart{
     background-color: #CFA5F0;
     transition: 0.4s;
@@ -182,6 +217,15 @@ header{
 #Buy:hover{
     filter: opacity(0.8);
     transition: 0.4s;
+}
+#HandMadeKeyRingImg{
+    width: 250px;
+}
+#HandMadePartyFavourImg{
+    width: 250px;
+}
+#HandMadeAshtrayImg{
+    width: 250px;
 }
 .ProductInfo{
     grid-area: Info;
@@ -282,6 +326,9 @@ footer{
     .NavBar{
         font-size: 20px;
         width: 90%;
+    }
+    #HandMadeKeyRingImg, #HandMadePartyFavourImg, #HandMadeAshtrayImg{
+        width: 150px;
     }
 
     

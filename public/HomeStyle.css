@@ -91,6 +91,7 @@ header{
     background-color: rgba(227, 202, 245, 0.4);
 }
 #FirstMessage{
+    font-size: 40px;
     padding-top: 3rem;
     opacity: 1;
 }
@@ -176,6 +177,15 @@ header{
 }
 #Product3{
     grid-area: Product3;
+}
+#HandMadeRingImg{
+    padding-right: 4rem;
+    padding-left: 4rem;
+    padding-bottom: 4rem;
+}
+#HandMadeKeyRingImg{
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 

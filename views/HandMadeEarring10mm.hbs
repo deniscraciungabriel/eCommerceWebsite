@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Made Earring</title>
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caudex&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://use.fontawesome.com/902264e2a2.js" ></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body onload="onLoadCartNumbers()">
+    <link rel="stylesheet" href="/HandMadeEarringStyle.css">
+
+
+    <header>
+        <h5 class="HeaderTitle" id="Andreea">Andreea Andrusca</h5>
+        <h5 class="HeaderTitle" id="Hand">Hand Made With Love Accessories</h5>
+        <hr>
+    </header>
+
+    <section class="NavBar">
+        <a href="/"><div id="Home">Home</div></a>
+        <a href="/shop"><div id="Shop">Shop</div></a>
+        <a href="/about"><div id="About">About</div></a>
+        <a href="/faq"><div id="FAQ">FAQ</div></a>
+        <a href="/contact"><div id="Contact">Contact</div></a>
+        <div>
+            <a href="/checkout"><i class="fa fa-shopping-cart"></i></a>
+            <span class="CartNumber"></span>
+        </div>
+    </section>
+    <hr>
+
+    
+
+    <section class="Product Centered">
+        <div class="ProductImage Centered">
+            <img src="/images/HandMadeEarringYellow.png" class="Centered" alt="Earring" id="HandMadeEarringImg">
+        </div>
+
+        <div class="ProductDetails">
+            <div class="ProductTitle">
+                <h5>Hand Made Earring</h5>
+                <div class="ProductPrice">€11.99</div>
+            </div>
+
+            <div class="ProductColors">
+                Color
+                <div class="Colors">
+                     <div class="Color" id="Red" onclick="ChangeColor('RedDiamond', 'Hand Made Earring 10mm', 'HandMadeEarring')"></div>
+                    <div class="Color" id="Yellow" onclick="ChangeColor('Yellow', 'Hand Made Earring 10mm', 'HandMadeEarring')"></div>
+                    <div class="Color" id="Orange" onclick="ChangeColor('Orange', 'Hand Made Earring 10mm', 'HandMadeEarring')"></div>
+                    <div class="Color" id="Blue" onclick="ChangeColor('Blue', 'Hand Made Earring 10mm', 'HandMadeEarring')"></div>
+                    <div class="Color" id="LightBlue" onclick="ChangeColor('LightBlue', 'Hand Made Earring 10mm', 'HandMadeEarring')"></div>
+                    <div class="Color" id="Purple" onclick="ChangeColor('Purple', 'Hand Made Earring 10mm', 'HandMadeEarring')"></div>
+                </div>
+            </div>
+
+            <div class="ProductSize">
+                <button onclick="window.location.replace('/HandMadeEarring')">8mm</button>
+                <button onclick="window.location.replace('/HandMadeEarring10mm')" class="ProductSizeButton">10mm</button>
+                <button onclick="window.location.replace('/HandMadeEarring12mm')">12mm</button>
+            </div>
+
+            <div class="ProductPay">
+                <button class="ProductButton Centered" id="Cart" onclick="cartNumbers('Hand Made Earring 10mm'); TotalCost('Hand Made Earring 10mm')">Add to cart</button>
+                <button class="ProductButton Centered" id="Buy" onclick="cartNumbers('Hand Made Earring 10mm'); TotalCost('Hand Made Earring 10mm'); payment()">Buy now</button>
+            </div>
+        </div>
+
+        <div class="ProductInfo">
+            <div class="InfoTitle">
+                Product Info
+                <hr>
+            </div>
+            <p class="Centered">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A pariatur iste fugit, alias corrupti amet debitis, aliquid incidunt suscipit hic sint neque illo quidem beatae dolor maiores velit reprehenderit optio. Eum eos deleniti veniam nostrum voluptatum reiciendis rerum earum? Laborum praesentium repudiandae nam mollitia quidem laudantium nobis totam labore, in possimus, rem et placeat sapiente error eius minus! Dolor, voluptatibus? Sit tempore debitis dolor cum magnam corrupti perspiciatis eligendi porro? Eaque illo dicta dolorem quidem assumenda, voluptatum quibusdam corporis, quas aut inventore pariatur veritatis, non neque ratione possimus fugiat necessitatibus optio saepe ipsa deserunt exercitationem. A, sint. Libero, temporibus nostrum similique minima porro a ratione at quam, molestiae eius officia praesentium! Numquam nostrum facilis dicta aliquam similique itaque ex incidunt sunt laboriosam vel, enim harum tenetur! Tempora et libero facilis, odit accusamus dolorum magnam neque dolorem asperiores, fugit omnis illo nemo. Dolore esse explicabo aspernatur amet at soluta eius, cum neque quos quasi officia iste est laborum asperiores! Officiis amet ipsa aliquam voluptatem tempore esse laboriosam aut a distinctio optio! Modi, architecto amet repudiandae perferendis dolor illo quas aliquam non quisquam eveniet fugiat aliquid repellat ab tempore harum sunt itaque molestias perspiciatis saepe. Nemo, dicta! Quis ullam rerum autem quo!
+            </p>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="Copyright">
+            <h5 class="CopyrightMessage">Copyright ©  2021 Andreea Andrusca</h5>
+            <h5 class="CopyrightCreator">Created by Denis Craciun</h5>
+        </div>
+
+        <div class="BackToTop">
+            
+            <a href="#"><button>
+                <i class="fa fa-arrow-up"></i>
+                Back To Top
+                <i class="fa fa-arrow-up"></i>
+            </button></a>
+            
+        </div>
+
+        <div class="Follow">
+            <div class="FollowText">
+                Follow us on:
+            </div>
+            <div class="FollowIcons Centered">
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-facebook"></i>
+            </div>
+            
+        </div>
+
+    </footer>
+
+    <script src="/scripts.js" async></script>
+    <script src="/payments.js"></script>
+</body>
+
+</html>

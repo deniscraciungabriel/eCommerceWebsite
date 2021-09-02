@@ -184,6 +184,23 @@ input{
     font-family: Raleway;
     text-align: center;
 }
+#HandMadeBracelet{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+#HandMadeKeyRing{
+    padding-top: 2rem;
+    padding-bottom: 1.8rem;
+}
+#HandMadeRing{
+    width: 130px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+#HandMadeAshtray{
+    padding-top: 5rem;
+    padding-bottom: 5.5rem;
+}
 #Product1{
     grid-area: Product1;
 }
