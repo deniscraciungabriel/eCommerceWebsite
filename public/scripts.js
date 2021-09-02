@@ -437,6 +437,9 @@ function ChangeColor(colorName, productName, productImage){
     FinalProductColor.color = colorName;
 }
 
+function ClearStorage(){
+    localStorage.clear();
+}
 
 onLoadCartNumbers(); 
 
