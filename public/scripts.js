@@ -384,7 +384,7 @@ function DeleteButtons(Name){
     
 
     localStorage.setItem("cartNumbers", ProductNumbers - cartItems[Name].inCart);
-    localStorage.setItem("TotalCost", TotalCost - (cartItems[Name].price * cartItems[Name].inCart));
+    localStorage.setItem("TotalCost", (TotalCost - (cartItems[Name].price * cartItems[Name].inCart)).toFixed(2));
     delete cartItems[Name];
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
     location.reload();
