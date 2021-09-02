@@ -6,7 +6,6 @@ const stripe = Stripe('pk_test_51JOkBLKMsNJKLnxN4NIh07zLyLrzXzAPCUlx6GOXvnMGODEf
 function payment(){
     startCheckout.textContent = "Processing...";
     buyProducts(myProducts());
-    localStorage.clear();
 }
 
 function myProducts(){
