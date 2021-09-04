@@ -1,4 +1,4 @@
-const host = "http://handmadeandrushka.herokuapp.com";
+const host = "http://handmadeandrushka.com";
 const startCheckout = document.getElementById("Buy");
 
 const stripe = Stripe('pk_test_51JOkBLKMsNJKLnxN4NIh07zLyLrzXzAPCUlx6GOXvnMGODEfVgsvs44ZyG85Ox4U8MuR1JZU1NTbrZHbnDYrgyHo00nvCvsoDI');
@@ -32,7 +32,7 @@ async function buyProducts(cartProducts){
             products: cartProducts
         })
 
-        const response = await axios.post('http://handmadeandrushka.herokuapp.com/checkouts', body, {
+        const response = await axios.post('http://handmadeandrushka.com/checkouts', body, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json"
