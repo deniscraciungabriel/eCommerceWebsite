@@ -106,10 +106,10 @@ exports.paymentsCtrlFunction = async (req,res) =>{
                 productsFromFrontEnd.forEach( singleProductFrontEnd => {
                     if(singleProductList.tag === singleProductFrontEnd.tag){
                         products.push({
-                            name: singleProductList.name + " " + singleProductFrontEnd.color,
+                            name: singleProductList.name + " " + singleProductFrontEnd.color + (singleProductFrontEnd.letter ? " Letter " + singleProductFrontEnd.letter : ""),
                             amount: singleProductList.price * 100.00,
                             currency: "eur",
-                            quantity: singleProductFrontEnd.inCart
+                            quantity: singleProductFrontEnd.inCart,
                         });
                     }
                 })
@@ -128,7 +128,7 @@ exports.paymentsCtrlFunction = async (req,res) =>{
             success_url: `${req.protocol}://${req.get("host")}/checkout/success`,
             cancel_url: `${req.protocol}://${req.get("host")}/checkout`,
             shipping_address_collection:{
-                allowed_countries: ["BE", "AT", "BG", "HR", "DE", "FR", "GR", "IT", "NL", "GB", "RO", "ES", "PT", "CZ", "SK", "SI"]
+                allowed_countries: ["BE", "AT", "BG", "HR", "DE", "FR", "GR", "IT", "NL", "GB", "RO", "ES", "PT", "CZ", "SK", "SI", "PL"]
             },
             line_items: productsToBuy()
         })

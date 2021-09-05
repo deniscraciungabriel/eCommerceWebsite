@@ -38,6 +38,7 @@ exports.productList = [
         price: 4.99,
         inCart: 0,
         color: "Orange",
+       
     },
 
     {

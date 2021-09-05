@@ -5,6 +5,7 @@ const Paymet = document.getElementById("Payment");
 var cartItems = [];
 const HandMadeEarring = document.getElementById("HandMadeEarringImg");
 const HandMadeBracelet = document.getElementById("HandMadeBraceletImg");
+const Letters = document.getElementById("Letters");
 
 ProductsList = [
     {
@@ -50,6 +51,7 @@ ProductsList = [
         price: 4.99,
         inCart: 0,
         color: "Orange",
+        letter: "A",
     },
 
     {
@@ -109,7 +111,7 @@ function ShowProducts(){
         <div class="Product1">
             <img src="/images/${item.Image}${item.color}.png" alt="Andrea Andrusca Earring" id="${item.tag}">
             <div class="Product1Details">
-                <div class="Product1Text">${item.name}</div>
+                <div class="Product1Text">${item.name + (item.letter ? " Letter "+ item.letter : "")}</div>
                 <div class="Product1Price">€${item.price}</div>
                 <div class="Product1Color">Color: ${item.color}</div>
                 <div class="Product1Quantity">
@@ -439,6 +441,11 @@ function ChangeColor(colorName, productName, productImage){
 
 function ClearStorage(){
     localStorage.clear();
+}
+
+function ChangeLetter(){
+    ProductsList[4].letter = Letters.value;
+    console.log(ProductsList[4]);
 }
 
 onLoadCartNumbers(); 
