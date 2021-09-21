@@ -1,4 +1,4 @@
-const host = "http://handmadeandrushka.com";
+const host = "https://handmadeandrushka.com";
 const startCheckout = document.getElementById("Buy");
 
 const stripe = Stripe('pk_live_51Jc5FyEdwIoQ5jtYZuEoj5fDfV5cYtNK2hfqh8lsoe0Ltg7EiNrVSEzsLd14QMyOZA87OMORk4mtDi1qxhn84y7T00F0QkpkKu');
