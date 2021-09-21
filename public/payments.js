@@ -33,7 +33,7 @@ async function buyProducts(cartProducts){
             products: cartProducts
         })
 
-        const response = await axios.post('http://handmadeandrushka.com/checkouts', body, {
+        const response = await axios.post('https://handmadeandrushka.com/checkouts', body, {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json"
