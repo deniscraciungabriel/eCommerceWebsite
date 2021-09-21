@@ -1,6 +1,6 @@
 const { productList } = require("../productList");
 const Stripe = require("stripe");
-const stripe = Stripe("sk_test_51JOkBLKMsNJKLnxN3h3k0gRYdxSs3vvYSgtn9WdhdtRJz1rO06xGuZA6qNjIyfZrru8bCVqWXxoAscatdB6vE5Ux00DVHoWEVP");
+const stripe = Stripe("sk_test_51Jc5FyEdwIoQ5jtYIEguawXnW5c3n9PwbdJaR5nI4gNDCvWfTN8nSyH6glRiGe6fCTnqdDbRifYm1SZvSNYDa3Tg00RJcAuRsq");
 
 exports.homeCtrlFunction = (req, res) =>{
     res.render("index");
