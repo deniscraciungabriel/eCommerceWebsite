@@ -1,7 +1,7 @@
 const host = "http://handmadeandrushka.com";
 const startCheckout = document.getElementById("Buy");
 
-const stripe = Stripe('pk_test_51Jc5FyEdwIoQ5jtYR0TNmfnhGb9NKBCrADjQnWvB5bet05JkZDlJq6f32UcCADrxfUfBvqNvRgdkjE2XP5GN0Iy0005cKqcxqi');
+const stripe = Stripe('pk_live_51Jc5FyEdwIoQ5jtYZuEoj5fDfV5cYtNK2hfqh8lsoe0Ltg7EiNrVSEzsLd14QMyOZA87OMORk4mtDi1qxhn84y7T00F0QkpkKu');
 
 function payment(){
     startCheckout.textContent = "Processing...";
