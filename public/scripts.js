@@ -8,10 +8,20 @@ const HandMadeBracelet = document.getElementById("HandMadeBraceletImg");
 const Letters = document.getElementById("Letters");
 
 ProductsList = [
+    
     {
         name: 'Hand Made Earring',
         Image: 'HandMadeEarring',
         tag: "HandMadeEarring",
+        price: 9.99,
+        inCart: 0,
+        color: "Yellow",
+    },
+
+    {
+        name: 'Hand Made Earring 6mm',
+        Image: "HandMadeEarringHeart",
+        tag: "HandMadeEarring6mm",
         price: 9.99,
         inCart: 0,
         color: "Yellow",

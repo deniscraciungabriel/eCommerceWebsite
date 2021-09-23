@@ -1,7 +1,16 @@
 exports.productList = [
+    
+
     {
-        name: 'Hand Made Earring',
+        name: 'Hand Made Earring 8mm',
         tag: "HandMadeEarring",
+        price: 9.99,
+        inCart: 0,
+        color: "Yellow",
+    },
+    {
+        name: 'Hand Made Earring 6mm',
+        tag: "HandMadeEarring6mm",
         price: 9.99,
         inCart: 0,
         color: "Yellow",

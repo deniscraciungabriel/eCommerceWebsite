@@ -22,6 +22,11 @@ exports.handMadeAshtrayCtrlFunction = (req, res) =>{
     res.render("HandMadeAshtray");
 };
 
+exports.handMadeEarring6mmCtrlFunction = (req, res) =>{
+    res.render("HandMadeEarring6mm");
+};
+
+
 exports.handMadeRingCtrlFunction = (req, res) =>{
     res.render("HandMadeRing");
 };
